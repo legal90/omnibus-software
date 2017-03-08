@@ -1,5 +1,5 @@
 #
-# Copyright 2012-2016 Chef Software, Inc.
+# Copyright 2012-2017, Chef Software Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -33,11 +33,6 @@ dependency "zlib"
 dependency "openssl"
 dependency "libffi"
 dependency "libyaml"
-# Needed for chef_gem installs of (e.g.) nokogiri on upgrades -
-# they expect to see our libiconv instead of a system version.
-# Ignore on windows - TDM GCC comes with libiconv in the runtime
-# and that's the only one we will ever use.
-dependency "libiconv"
 
 version("2.4.0")      { source sha256: "152fd0bd15a90b4a18213448f485d4b53e9f7662e1508190aa5b702446b29e3d" }
 
